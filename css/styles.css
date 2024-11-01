@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    & h1{
+        text-align: center;
+    }
+}
+.card{
+    border: 1px solid lightgray;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 24px;
+    & button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+#piggyBank.jump {
+    animation: jump 0.5s ease; /*Lo que hace esta animacion es ejecutar el keyframe*/
+    position: relative;
+}
+
+#coinsContainer {
+    position: relative; /*Posicion relativa para que coins aparezca correctamente*/
+}
+
+.coins{
+    width: 20px;
+    height: 20px;
+    background: gold;
+    border-radius: 50%;
+    position: absolute; /*Para ponerlo atras del cerdito*/
+    /*Left, right y margin 0 son para centrar*/
+    left: 0;
+    right: 0; 
+    margin: 0 auto;
+    animation: coin 0.5s ease forwards; /*Forwards es para que quede arriba la moneda*/
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-60px); /*Para que el puerquito brinque*/
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes coin {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
