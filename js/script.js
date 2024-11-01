@@ -1,4 +1,3 @@
-//Para que el puerquito brinque
 const piggyBank = document.getElementById('piggyBank');
 const coinsContainer = document.querySelector('.coinsContainer'); //Pusimos el query selector por que no tenemos un id, tenemos una clase
 const initialCoins=20; 
@@ -6,7 +5,7 @@ let currentCoins=initialCoins;
 const coinValue = document.querySelector('.coinValue');
 
 //Mostrar el valor inicial de las monedas en el HTML
-coinValue.textContent = `Tengo $${initialCoins}`;
+coinValue.textContent = `Tengo $ ${initialCoins}`;
 
 piggyBank.addEventListener('click', () => {
     if (currentCoins > 0) {
